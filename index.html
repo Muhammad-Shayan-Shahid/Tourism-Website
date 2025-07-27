@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+    <title>Adventure</title> 
+    <style>
+       *{
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+        html,body{
+            font-family: Arial, Helvetica, sans-serif;
+            width: 100vw;
+            height: 100%;
+            font-size: 16px;
+            overflow-x: hidden;
+        }
+        .main{
+             width: 100vw;
+            height: 100%;
+        }
+         header{
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            background-image: url(mmm.avif);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+         }
+          .nav{
+             width: 100vw;
+             height: 10%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0vw 8vw;
+             color: white;
+        }
+        nav ul{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            list-style-type: none;
+            gap: 1.5rem;
+        }
+        nav ul li a{
+            font-size: 1.3rem;
+            text-decoration: none;
+            transition: .5s;
+             color: white;
+        }
+        nav ul li a:hover{
+            color: #ff006a;
+        }
+        nav i{
+            font-size: 20px;
+            color: #fc036b;
+            display: none;
+        }
+        .active a{
+            color:#ff006a;
+        }
+        button{
+            font-size: 1rem;
+            padding: 0.5rem;
+            border-radius: 20px;
+            border: none;
+            background-color: #ff006a;
+            color: white;
+            transition: .5s;
+        }
+        button:hover{
+            color: #fc036b;
+            background-color: white;
+        }
+        span{
+            color: #ff006a;
+        }
+        header .content{
+           position: absolute;
+           top: 40%;
+           left: 30%;
+           line-height: 3.5rem;
+           color: white;
+           background-attachment: fixed;
+        }
+        .upcoming-events{
+            position: relative;
+             width: 100vw;
+            height: 90vh;
+            background-color:white;
+        }
+        .upcoming-events>h1{
+            position: absolute;
+            top: 2%;
+            left: 38%;
+        }
+        .upcoming-events .img-container{
+            top: 10%;
+            width: 100vw;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+             flex-wrap: wrap;
+            gap: 40px;
+        }
+        .upcoming-events .img-container .box{
+            width: 40%;
+            height: 65%;
+        }
+        .upcoming-events .img-container .box>p{
+            margin : 10px 0px;
+         }
+        .box>img{
+            width: 100%;
+            height: 70%;
+            border: 2px solid #ff006a;
+            border-radius: 10px;
+            transition: 0.5s;
+        }
+        .box>img:hover{
+             width: 105%;
+            height: 80%;
+        }
+        .box>button:hover{
+             border: 2px solid #ff006a;
+        }
+        .explore-world{
+            position: relative;
+            width: 100vw;
+            height: 80vh;
+            background-image: url(exploreWorld.jpg);
+             background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+        .explore-world .content{   
+            width: 35%; 
+            position: absolute;
+            top: 20%;
+            left: 10%;
+            color: white;
+         }
+          .explore-world .content>p{
+            margin: 20px 0px;
+          }
+       .tours{
+            position: relative;
+             width: 100vw;
+            height: 100%;
+        }
+        .tours>h1{
+            position: absolute;
+            top: 2%;
+            left: 35%; 
+        }
+        .tours .tour-conatainer{
+              width: 100vw;
+            height: 100%;
+             display: flex;
+            align-items: center;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .tours .tour-conatainer .box{
+            width: 30%;
+            height: 50%;
+            border: 2px soild #ff006a;
+         }
+         .tours .tour-conatainer .box>img{
+             width: 100%;
+            height: 100%;
+            transition: 0.5s;
+         }
+          .tours .tour-conatainer .box>img:hover{
+            width: 105%;
+            height: 105%;
+          }
+        .footer{
+            position: relative;
+             width: 100vw;
+            height: 15vh;
+            background-color: rgb(83, 75, 75);
+        }
+        .footer .content{
+            position: absolute;
+            top: 10%;
+            left: 35%;
+            color: white;
+        }
+        @media (max-width:768px) {
+            .nav ul{
+                display: none;
+            }
+            nav i{
+            font-size: 20px;
+            color: #fc036b;
+            display: block;
+        }
+        h1 , h2{
+            font-size: 1.5rem;
+        }
+        p{
+            font-size: 1rem;
+        }
+        header .content{
+            left: 20%;
+        }
+        .upcoming-events{
+            height: 100vh;
+        }
+        .upcoming-events .img-container{
+            flex-direction: column;
+            gap: 10px;
+        }
+        .upcoming-events .img-container .box{
+              width: 80%;
+            height: 45%;
+        }
+         .upcoming-events>h1{
+            top: 0.5%;
+            left:30%;
+         }
+           #left>button{
+            display: none;
+        }
+        .explore-world .content>h1{
+            color: #ff006a;
+        }
+         .tours>h1{
+                top: 0%;
+                left: 23%;
+             }
+            .tours .tour-conatainer{
+                flex-direction: column;
+            }
+             .tours .tour-conatainer .box{
+                width: 45%;
+                height: 25%;
+             }
+              .footer .content{
+                left: 20%;
+              }
+    }
+        @media (max-width:480px) {
+              h1 , h2{
+            font-size: 1.2rem;
+        }
+        p{
+            font-size: 0.8rem;
+        }
+        button{
+            padding: 0.2rem;
+             font-size: 0.8rem;
+        }
+        header .content{
+             left: 15%;
+        }
+        .upcoming-events .img-container .box>p{
+            margin : 8px 0px;
+        }
+        .tours>h1{
+                left: 15%;
+             }
+        .tours .tour-conatainer .box{
+                width: 70%;
+                height: 25%;
+             }
+         }
+    </style>
+</head>
+<body>
+    <div class="main">
+       <header>
+        <div class="nav">
+             <h1>Adventure</h1>
+            <nav>
+            <ul>
+                <li class="active"><a href="#">Home</a></li>
+               <li><a href="#">Tour</a></li>
+               <li><a href="#">About</a></li>
+               <li><a href="#">Services</a></li>
+                <button>Contact</button>
+            </ul>
+            <i class="ri-menu-2-line"></i>
+        </nav>
+        </div>
+        <div class="content">
+             <h2>Explore The Colorful <span>World</span></h2>
+            <h1>A <span>Wonderful</span> gift</h1>
+             <button>Learn More</button>
+        </div>
+       </header>
+        <div class="upcoming-events">
+            <h1 style="color: #fc036b;"> Upcoming Events</h1>
+            <div class="img-container">
+                <div class="box" id="left">
+                     <img src="upcoming-left.jpg" alt="">
+                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et eos esse amet blanditiis beatae in harum, expedita voluptatibus magni ducimus?</p>
+                     <button>Learn More</button>
+                </div>
+                <div class="box" id="right">
+                     <img src="upsoming-right.jpg" alt="">
+                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et eos esse amet blanditiis beatae in harum, expedita voluptatibus magni ducimus?</p>
+                     <button>Learn More</button>
+                </div>
+            </div>
+        <div class="explore-world">
+         <div class="content">
+             <h1>Explore The <span>World</span></h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam, voluptatum rerum earum aspernatur hic quod tempore. Nulla recusandae ex amet.</p>
+             <button>Learn More</button>
+        </div>
+        </div>
+        <div class="tours">
+            <h1 style="color: #fc036b;">Upcoming Tours & Destinations</h1>
+            <div class="tour-conatainer">
+                 <div class="box">
+                    <img src="Tour-1.jpg" alt="">
+                </div>
+                <div class="box">
+                    <img src="Tour-2.jpg" alt="">
+                </div>
+                <div class="box">
+                    <img src="Tour-3.jpg" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="content">
+                <h2>@ Shayan DevOPS.</h2>
+                <h2>All rights are reserved | Pakistan 2025</h2>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
