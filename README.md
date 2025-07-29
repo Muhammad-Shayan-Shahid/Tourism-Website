@@ -13,7 +13,7 @@ This is a simple and responsive tourism website built with **HTML** and  **CSS**
 - HTML5
 - CSS3
 
-## 👤 Author
+## 🌐 Website Author
 
 **Shayan Shahid**  
 📍 Java & Front-End Learner  
