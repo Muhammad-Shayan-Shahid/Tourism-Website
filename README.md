@@ -16,7 +16,7 @@ This is a simple and responsive tourism website built with **HTML** and  **CSS**
 ## 🌐 Website Author
 
 **Muhammad Shayan Shahid**  
-📍 Java & Front-End Learner  
+📍 Front-End Learner  
 📧 [msshahid23052006@gmail.com](mailto:msshahid23052006@gmail.com)  
 
 Feel free to connect or reach out for collaboration or feedback! 🤝
